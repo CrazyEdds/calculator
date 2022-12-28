@@ -6,12 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
-    <skript src="skript.js" defer></skript>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="calculator">
         <div class="calcName">Coolcalator</div>
-        <div class="calcDisplay"></div>
+        <div class="calcDisplay">
+            <div id="result"></div>
+            <div id="equation">0</div>
+        </div>
+        <div class="removeButtons">
+            <button id="clear">clear</button>
+            <button id="delete">delete</button>
+        </div>
         <div class="numberField">
             <button>7</button>
             <button>8</button>
@@ -24,14 +31,13 @@
             <button>3</button>
             <button>0</button>
             <button>.</button>
-            <button>(-)</button>
+            <button id="equals">=</button>
         </div>
         <div class="operators">
             <button>&#43;</button>
             <button>&#8722;</button>
             <button>&#215;</button>
             <button>&#247;</button>
-            <button>&#61;</button>
         </div>
     </div>
 </body>
