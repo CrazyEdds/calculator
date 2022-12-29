@@ -78,14 +78,14 @@ function inputSignal() {
                     answer = calcNumbers[0] / calcNumbers[1];
                     break;
             }
-
+            answer = Math.round((answer + Number.EPSILON) * 100) / 100;
             result.textContent = `${equation.textContent}=${answer}`;
             equation.textContent = answer;
             isRecentAnswer = true;
         }
     }
     else if (this.textContent === ".") {
-        if (/\d$/.test(equation.textContent) && !isRecentAnswer) {
+        if (!/(\D$|\d+\.\d+$)/.test(equation.textContent) && !isRecentAnswer) {
             equation.textContent = equation.textContent + ".";
         }
     }
