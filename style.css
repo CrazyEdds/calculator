@@ -6,6 +6,11 @@
 button {
     font-size: 1.5rem;
     border-radius: 1rem;
+    background-color: rgb(252, 241, 227);
+}
+
+button:hover {
+    background-color:rgb(247, 225, 198);
 }
 
 .calculator {
